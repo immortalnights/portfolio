@@ -1,41 +1,38 @@
 import React from 'react'
+import Asteroids from './asteroids.ts'
 import './App.css'
 
 function App() {
   const [ canvasSize, setCanvasSize ] = React.useState({ w: window.innerWidth, h: window.innerHeight })
   const canvasRef = React.useRef(null)
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const handleResize = () => {
-      setCanvasSize({ w: window.innerWidth, h: window.innerHeight })
+      const size = canvasRef.current.getBoundingClientRect()
+      const ratio = window.devicePixelRatio || 1
+
+      setCanvasSize({
+        width: size.width,
+        height: size.height
+      })
+
+      // canvasRef.current.getContext('2d').scale(ratio, ratio)
     }
 
-    document.addEventListener('resize', handleResize)
+    window.addEventListener('resize', handleResize)
+    handleResize()
 
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [ canvasSize ])
+  }, [ setCanvasSize ])
 
   React.useEffect(() => {
-    let id
-    const context: CanvasRenderingContext2D = canvasRef.current.getContext('2d')
+    const asteroids = new Asteroids(canvasRef.current)
 
-    const render = () => {
-      context.clearRect(0, 0, context.canvas.width, context.canvas.height)
-
-      // context.fillStyle = 
-      context.beginPath()
-      context.fillRect(100, 100, 50, 5)
-      context.closePath()
-
-
-      id = window.requestAnimationFrame(render)
-    }
-
-    render()
+    asteroids.play()
 
     return () => {
-      window.cancelAnimationFrame(id)
+      asteroids.stop()
     }
   }, [ canvasRef ])
 
@@ -47,11 +44,11 @@ function App() {
         <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
       </header>
       <section>
-        I'm a hardworking, quick learning, team player.
+        I'm a hardworking, quick learning, team player. I enjoy running, swimming, gaming and films.
       </section>
       <section>
         <p>I have over ten years experience working at an industry leading tech company.</p>
-        <p>Programming in C++, JavaScript and Python</p>
+        <p>Programming in C++, JavaScript and Python.</p>
         <p>Using Jenkins, Docker and GIT.</p>
       </section>
       <section>

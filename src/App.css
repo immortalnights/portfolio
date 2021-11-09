@@ -1,19 +1,24 @@
 .App {
 }
 
+header {
+  min-height: 100vh;
+}
+
 header, section {
   text-align: center;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(201, 201, 201);
   margin: 10px;
 }
+
 section {
   min-height: 50vh;
+  max-width: 75vw;
+  margin: 10px auto;
 }
 
 h1 {
@@ -51,6 +56,7 @@ h2 {
 .preview .info {
   display: flex;
   flex-direction: column;
+  flex: 1 0 0%;
 }
 
 .preview .info h4 {
@@ -59,6 +65,19 @@ h2 {
 
 .preview .info p {
   margin: 0 0.1em;
+}
+
+@media only screen and (max-width: 799px) {
+  .preview.left {
+    flex-direction: column;
+  }
+  .preview.right {
+    flex-direction: column;
+  }
+  .preview .image {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 footer {
