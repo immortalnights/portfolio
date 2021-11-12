@@ -29,7 +29,7 @@ function App() {
   React.useEffect(() => {
     const asteroids = new Asteroids(canvasRef.current)
 
-    asteroids.play()
+    setTimeout(asteroids.play.bind(asteroids), 1)
 
     return () => {
       asteroids.stop()
