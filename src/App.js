@@ -1,5 +1,7 @@
 import React from 'react'
+import Project from './Project'
 import Asteroids from './asteroids.ts'
+import projects from './projects.json'
 import './App.css'
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
   React.useLayoutEffect(() => {
     const handleResize = () => {
       const size = canvasRef.current.getBoundingClientRect()
-      const ratio = window.devicePixelRatio || 1
+      // const ratio = window.devicePixelRatio || 1
 
       setCanvasSize({
         width: size.width,
@@ -39,8 +41,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>.</h1>
-        <h2>I'm a full-stack developer.</h2>
+        <section>
+          <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>.</h1>
+          <h2>I'm a full-stack developer.</h2>
+        </section>
         <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
       </header>
       <section>
@@ -52,24 +56,7 @@ function App() {
         <p>Using Jenkins, Docker and GIT.</p>
       </section>
       <section>
-        <div className="preview left">
-          <div className="image"><img alt="" width="" height="" /></div>
-          <div className="info">
-            <h4>Title</h4>
-            <p>Something about the item.</p>
-            <p>Something about the item.</p>
-            <p>Something about the item.</p>
-          </div>
-        </div>
-        <div className="preview right">
-          <div className="image"><img alt="" width="" height="" /></div>
-          <div className="info">
-            <h4>Title</h4>
-            <p>Something about the item.</p>
-            <p>Something about the item.</p>
-            <p>Something about the item.</p>
-          </div>
-        </div>
+        {projects.map((item, index) => <Project key={index} {...item} />)}
       </section>
       <footer>
         Andrew Cockayne &copy; 2021
