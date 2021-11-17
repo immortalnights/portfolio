@@ -2,43 +2,48 @@
   {
     "name": "test_1",
     "description": "desc_1",
-    "image": "noimage.png",
+    "image": "",
     "href": "https://google.com"
   },
   {
     "name": "test_2",
     "description": "desc_2",
-    "image": "noimage.png",
+    "image": "",
     "href": "https://google.com"
   },
   {
+    "name": "Ludum Dare 49: Shields Down",
+    "description": "Ludum Date 49 entry.  \nBased on the theme *Unstable*.",
+    "image": "shieldsdown.png",
+    "href": "https://ldjam.com/events/ludum-dare/49/shields-down",
+    "source": "https://github.com/immortalnights/ld48-unstable-sheilds-down"
+  },
+  {
     "name": "Steam Achievements Tracker",
-    "description": "",
-    "image": "",
-    "href": "https://steam.seventh.space"
+    "description": "Steam achievements tracking and statistics",
+    "image": "steamachievements.png",
+    "href": "https://steam.seventh.space",
+    "source": "https://github.com/immortalnights/achievementhunter"
   },
   {
     "name": "Mega-lo-Mania Game",
-    "description": "",
+    "description": "Clone of the Mega-lo-Mania by Sensible Software (1991).  \nUsing Phaser 3 a JavaScript game engine.",
     "image": "",
-    "href": ""
+    "href": "",
+    "source": "https://github.com/immortalnights/mega-lo-mania-phaser"
   },
   {
     "name": "Supremacy Game",
-    "description": "",
+    "description": "Clone of the Supremacy by Probe Software (1990).  \nUsing React and Recoil.",
     "image": "",
-    "href": ""
+    "href": "",
+    "source": "https://github.com/immortalnights/supremacy"
   },
   {
     "name": "Sorcerer's Cave Game",
-    "description": "",
+    "description": "Clone of the board game Sorcerer's Cave by Terence Peter Donnelly (1978).  \nUsing React.",
     "image": "",
-    "href": ""
-  },
-  {
-    "name": "",
-    "description": "",
-    "image": "",
-    "href": ""
+    "href": "",
+    "source": "https://github.com/immortalnights/thesorcererscave"
   }
 ]

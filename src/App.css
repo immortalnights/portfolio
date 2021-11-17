@@ -86,6 +86,10 @@ h1, h2 {
   min-height: 300px;
 }
 
+.project .details {
+  padding: 0 2em;
+}
+
 
 .preview .image-container {
   margin: 10px;
