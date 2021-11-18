@@ -5,14 +5,14 @@ const Project = ({ name, description, image, href, source }) => {
 
   if (image === "")
   {
-    image = "noimage.png"
+    image = 'noimage.png'
   }
 
   return (
     <div className="project">
       <div>
         <div className="image-container">
-          <img className="image" alt={name} src={image} />
+          <img className="image" alt={name} src={process.env.PUBLIC_URL + '/' + image} />
         </div>
       </div>
       <div className="details">

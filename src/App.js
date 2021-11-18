@@ -1,6 +1,5 @@
 import React from 'react'
 import Project from './Project'
-import Asteroids from './asteroids.ts'
 import projects from './projects.json'
 import './App.css'
 
@@ -29,12 +28,12 @@ function App() {
   }, [ setCanvasSize ])
 
   React.useEffect(() => {
-    const asteroids = new Asteroids(canvasRef.current)
+    // const asteroids = new Asteroids(canvasRef.current)
 
-    setTimeout(asteroids.play.bind(asteroids), 1)
+    // setTimeout(asteroids.play.bind(asteroids), 1)
 
     return () => {
-      asteroids.stop()
+      // asteroids.stop()
     }
   }, [ canvasRef ])
 
