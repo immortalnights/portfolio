@@ -38,9 +38,9 @@ function App() {
           <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>.</h1>
           <h2>A full-stack developer.</h2>
           <p>
-            <a href="https://github.com/immortalnights" target="_blank"><FontAwesomeIcon icon={faGithubSquare} /> GitHub</a>
-            <a href="https://www.linkedin.com/in/andrew-cockayne/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
-            <a href="mailto:a.cockayne@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelopeSquare} /> Email</a>
+            <a href="https://github.com/immortalnights" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubSquare} /> GitHub</a>
+            <a href="https://www.linkedin.com/in/andrew-cockayne/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
+            <a href="mailto:a.cockayne@gmail.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelopeSquare} /> Email</a>
           </p>
           <div className="spacer"></div>
           <p className="footnote">(Asteroids game is work in progress)</p>
