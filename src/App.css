@@ -6,6 +6,7 @@
 header {
   min-height: 100vh;
   display: flex;
+  position: relative;
 }
 
 header > div, header > canvas {
@@ -19,6 +20,12 @@ header > div, header > canvas {
 header > section {
   margin: 0 auto;
   padding: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+header a {
+  margin: 0 10px;
 }
 
 section {
@@ -43,6 +50,15 @@ h1, h2 {
   white-space: nowrap;
 }
 
+.spacer {
+  flex: 1 0 0%;
+}
+
+.footnote {
+  font-size: 40%;
+  text-align: right;
+  position: relative;
+}
 
 
 @media (min-width: 576px) {
@@ -133,4 +149,13 @@ footer {
   border-top: 1px solid #787b82;
   color: #787b82;
   font-size: 50%;
+}
+
+a, a:active, a:visited {
+  color: lightgray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(34, 94, 34);
 }

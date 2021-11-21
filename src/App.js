@@ -1,4 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Project from './Project'
 import projects from './projects.json'
 import './App.css'
@@ -27,27 +30,25 @@ function App() {
     }
   }, [ setCanvasSize ])
 
-  React.useEffect(() => {
-    // const asteroids = new Asteroids(canvasRef.current)
-
-    // setTimeout(asteroids.play.bind(asteroids), 1)
-
-    return () => {
-      // asteroids.stop()
-    }
-  }, [ canvasRef ])
-
   return (
     <div className="App">
       <header className="App-header">
         <section>
+          <div className="spacer"></div>
           <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>.</h1>
-          <h2>I'm a full-stack developer.</h2>
+          <h2>A full-stack developer.</h2>
+          <p>
+            <a href="https://github.com/immortalnights" target="_blank"><FontAwesomeIcon icon={faGithubSquare} /> GitHub</a>
+            <a href="https://www.linkedin.com/in/andrew-cockayne/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
+            <a href="mailto:a.cockayne@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelopeSquare} /> Email</a>
+          </p>
+          <div className="spacer"></div>
+          <p className="footnote">(Asteroids game is work in progress)</p>
         </section>
         <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
       </header>
       <section>
-        I'm a hardworking, quick learning, team player. I enjoy running, swimming, gaming and films.
+        <p>I'm a hardworking, quick learning, team player. I enjoy running, swimming, gaming and films.</p>
       </section>
       <section>
         <p>I have over ten years experience working at an industry leading tech company.</p>
