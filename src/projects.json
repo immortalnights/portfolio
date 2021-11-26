@@ -1,15 +1,15 @@
 [
   {
-    "name": "test_1",
-    "description": "desc_1",
+    "name": "Single Page Application UI",
+    "description": "As the team leader I helped create the complete UI for a large distributed data protection application. Written in JavaScript the UI utilizes the application API which I also played a key role in designing.",
     "image": "",
-    "href": "https://google.com"
+    "href": ""
   },
   {
-    "name": "test_2",
-    "description": "desc_2",
+    "name": "Application SDK and CI",
+    "description": "I am the key developer and maintainer of the SDK. Written in Python and used by customers and our own Automation engineers. I have also been involved in championing consistency in and improvements to our CI solution.",
     "image": "",
-    "href": "https://google.com"
+    "href": ""
   },
   {
     "name": "Ludum Dare 49: Shields Down",

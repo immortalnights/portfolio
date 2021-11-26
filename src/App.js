@@ -35,8 +35,7 @@ function App() {
       <header className="App-header">
         <section>
           <div className="spacer"></div>
-          <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>.</h1>
-          <h2>A full-stack developer.</h2>
+          <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>, a full-stack developer.</h1>
           <p>
             <a href="https://github.com/immortalnights" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubSquare} /> GitHub</a>
             <a href="https://www.linkedin.com/in/andrew-cockayne/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
@@ -48,12 +47,11 @@ function App() {
         <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
       </header>
       <section>
-        <p>I'm a hardworking, quick learning, team player. I enjoy running, swimming, gaming and films.</p>
+        <p>I have over ten years’ experience working at an industry leading technology company. During that time I have worked on a distributed backend system for data protection using <em>C++</em>. I am currently team leader for the UI/UX team for the application front-end, written in <em>JavaScript</em>.</p>
+        <p>I have excellent knowledge in <em>Python</em> which I utilize for application automation and API integration, alongside <em>Continuous Integration</em> tools such as Jenkins and Docker.</p>
       </section>
       <section>
-        <p>I have over ten years experience working at an industry leading tech company.</p>
-        <p>Programming in C++, JavaScript and Python.</p>
-        <p>Using Jenkins, Docker and GIT.</p>
+        <p>My other interests include running, swimming, gaming and films.</p>
       </section>
       <section>
         {projects.map((item, index) => <Project key={index} {...item} />)}
