@@ -28,7 +28,7 @@
   {
     "name": "Mega-lo-Mania Game",
     "description": "Clone of the Mega-lo-Mania by Sensible Software (1991).  \nUsing Phaser 3 a JavaScript game engine.",
-    "image": "",
+    "image": "megalomaniaphaser.png",
     "href": "",
     "source": "https://github.com/immortalnights/mega-lo-mania-phaser"
   },
@@ -44,6 +44,6 @@
     "description": "Clone of the board game Sorcerer's Cave by Terence Peter Donnelly (1978).  \nUsing React.",
     "image": "",
     "href": "",
-    "source": "https://github.com/immortalnights/thesorcererscave"
+    "source": ""
   }
 ]
