@@ -10,17 +10,17 @@ const Project = ({ name, description, image, href, source }) => {
 
   return (
     <div className="project">
-      <div>
-        <div className="image-container">
-          <img className="image" alt={name} src={process.env.PUBLIC_URL + '/' + image} />
-        </div>
+      <div className="image-container">
+        <img className="image" alt={name} src={process.env.PUBLIC_URL + '/' + image} />
       </div>
       <div className="details">
-        <h4>{name}</h4>
-        <ReactMarkdown>{description}</ReactMarkdown>
-        <div>
-          <span>{href ? (<a href={href} target="_blank" rel="noreferrer" >Visit</a>) : null }</span>
-          <span>{source ? (<a href={source} target="_blank" rel="noreferrer" >Source</a>) : null }</span>
+        <div style={{padding: "0.25em"}}>
+          <h4>{name}</h4>
+          <ReactMarkdown>{description}</ReactMarkdown>
+          <div>
+            <span>{href ? (<a href={href} target="_blank" rel="noreferrer" >Visit</a>) : null }</span>
+            <span>{source ? (<a href={source} target="_blank" rel="noreferrer" >Source</a>) : null }</span>
+          </div>
         </div>
       </div>
     </div>
