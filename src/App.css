@@ -9,6 +9,18 @@ header {
   position: relative;
 }
 
+.social-links {
+  margin: 0.5em auto;
+  padding: 0.5em 0;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: black 5px 5px 4px 2px;
+}
+
+.social-links > a {
+  margin: 0 12px;
+}
+
 .asteroids {
   position: absolute;
   top: 0;

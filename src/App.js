@@ -76,11 +76,11 @@ function App() {
         <section className={overlayClasses.join(" ")}>
           <div className="spacer"></div>
           <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>, a full-stack developer.</h1>
-          <p>
+          <div className="social-links">
             <a href="https://github.com/immortalnights" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubSquare} /> GitHub</a>
             <a href="https://www.linkedin.com/in/andrew-cockayne/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
             <a href="mailto:a.cockayne@gmail.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelopeSquare} /> Email</a>
-          </p>
+          </div>
           <div className="spacer"></div>
           <p className="footnote">
             <span onClick={onPlayAsteroidsClick} style={{cursor: "pointer"}}>Click to play</span>
