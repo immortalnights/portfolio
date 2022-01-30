@@ -33,6 +33,8 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
+        env:
+          REACT_APP_MY_SECRET: https://cdn.jsdelivr.net/gh/immortalnights/asteroids/dist/asteroids.js
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
