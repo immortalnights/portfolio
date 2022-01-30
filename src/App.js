@@ -30,10 +30,50 @@ function App() {
     }
   }, [ setCanvasSize ])
 
+  const [inGame, setInGame] = React.useState(false)
+
+  const onPlayAsteroidsClick = () => {
+    setInGame(true)
+  }
+
+  const onEndAsteroidsClick = () => {
+    setInGame(false)
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("keyup", (event) => {
+      console.log(event.key)
+      if (event.key === 'Escape')
+      {
+        setInGame(false)
+      }
+    })
+  })
+
+  React.useEffect(() => {
+    if (inGame)
+    {
+      window.AsteroidsNS?.play()
+    }
+    else
+    {
+      window.AsteroidsNS?.end()
+    }
+  }, [inGame])
+
+  const overlayClasses = ["game-overlay"]
+  if (inGame)
+  {
+    overlayClasses.push("fade-out")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <section>
+      <section className="app-header">
+        <div className="asteroids">
+          <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
+        </div>
+        <section className={overlayClasses.join(" ")}>
           <div className="spacer"></div>
           <h1>Hello, I'm <span className="name-highlight">Andrew Cockayne</span>, a full-stack developer.</h1>
           <p>
@@ -42,12 +82,19 @@ function App() {
             <a href="mailto:a.cockayne@gmail.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelopeSquare} /> Email</a>
           </p>
           <div className="spacer"></div>
-          <p className="footnote">(Asteroids game is work in progress)</p>
+          <p className="footnote">
+            <span onClick={onPlayAsteroidsClick} style={{cursor: "pointer"}}>Click to play</span>
+            <br />(Asteroids game is work in progress)
+          </p>
         </section>
-        <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
-      </header>
+        <div style={{ position: 'absolute', bottom: 0, right: 0, paddingRight: 20, visibility: inGame ? "visible" : "hidden" }}>
+          <p className="footnote">
+            <span onClick={onEndAsteroidsClick} style={{cursor: "pointer"}}>Press 'ESC' to end</span>
+          </p>
+        </div>
+      </section>
       <section>
-        <p>I have over ten years’ experience working at an industry leading technology company. During that time I have worked on a distributed backend system for data protection using <em>C++</em>. I am currently team leader for the UI/UX team for the application front-end, written in <em>JavaScript</em>.</p>
+        <p>I have over ten years' experience working at an industry leading technology company. During that time I have worked on a distributed backend system for data protection using <em>C++</em>. I am currently team leader for the UI/UX team for the application front-end, written in <em>JavaScript</em>.</p>
         <p>I have excellent knowledge in <em>Python</em> which I utilize for application automation and API integration, alongside <em>Continuous Integration</em> tools such as Jenkins and Docker.</p>
       </section>
       <section>
@@ -57,7 +104,7 @@ function App() {
         {projects.map((item, index) => <Project key={index} {...item} />)}
       </section>
       <footer>
-        Andrew Cockayne &copy; 2021
+        Andrew Cockayne &copy; 2022
       </footer>
     </div>
   );
